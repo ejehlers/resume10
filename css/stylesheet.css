@@ -1,3 +1,6 @@
+:root {
+  --progress-width: 0%;
+}
 header {
   height: 450px;
   background-color: black;
@@ -101,7 +104,7 @@ header p {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1500px) {
   #gradpic {
     opacity: 30%;
     left: 0;
@@ -134,10 +137,48 @@ footer a:hover {
 footer {
   background-color: #343330;
   text-align: center;
-  color: rgb(199, 153, 1);
+  color: rgb(255, 255, 255);
   background-image: url(/images/bricks.jpg);
 }
 main {
   float: left;
   background-color: azure;
+}
+
+.progress {
+  cursor: pointer;
+}
+
+.progress-bar {
+  padding: 0 1rem;
+  width: 30%;
+  border-radius: var(--bs-progress-border-radius);
+}
+.progress:hover .progress-bar {
+  animation: grow-on-hover 500ms 1 forwards;
+}
+
+.progress:hover .bg-success {
+  --progress-width: 40%;
+}
+
+.progress:hover .bg-info {
+  --progress-width: 50%;
+}
+
+.progress:hover .bg-warning {
+  --progress-width: 60%;
+}
+
+.progress:hover .bg-danger {
+  --progress-width: 100%;
+}
+
+@keyframes grow-on-hover {
+  from {
+    width: 30%;
+  }
+  to {
+    width: var(--progress-width);
+  }
 }
