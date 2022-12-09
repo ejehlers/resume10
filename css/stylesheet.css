@@ -98,6 +98,17 @@ header p {
   justify-content: center;
 }
 
+main {
+  background-color: black;
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(70, 70, 73) 35%,
+    rgba(105, 106, 107, 0.835) 100%
+  );
+  color: azure;
+}
+
 @media screen and (max-width: 650px) {
   #gradpic {
     display: none;
@@ -137,7 +148,7 @@ footer a:hover {
 footer {
   background-color: #343330;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(199, 153, 1);
   background-image: url(/images/bricks.jpg);
 }
 main {
@@ -159,7 +170,7 @@ main {
 }
 
 .progress:hover .bg-success {
-  --progress-width: 40%;
+  --progress-width: 90%;
 }
 
 .progress:hover .bg-info {
